@@ -63,4 +63,3 @@ jobs:
           app-name: 'devops-todo-api'
           slot-name: 'Production'
           package: .
-          
