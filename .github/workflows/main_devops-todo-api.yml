@@ -39,8 +39,8 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker login ${{ secrets.REGISTRY_LOGIN_SERVER }} -u ${{ secrets.AZURE_CLIENT_ID }} -p ${{ secrets.AZURE_CLIENT_SECRET }}
-          docker build -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/dotNetTodoApi:${{ github.sha }} .
-          docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/dotNetTodoApi:${{ github.sha }}
+          docker build -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/dot-net-todo-api:${{ github.sha }} .
+          docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/dot-net-todo-api:${{ github.sha }}
 
 #      - name: Login to Azure
 #        uses: azure/login@v1
