@@ -42,7 +42,6 @@ jobs:
           docker build -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/myapp:${{ github.sha }} .
           docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/myapp:${{ github.sha }}
 
-
 #      - name: Login to Azure
 #        uses: azure/login@v1
 #        with:    
