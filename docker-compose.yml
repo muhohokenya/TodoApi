@@ -1,6 +1,21 @@
-﻿services:
+﻿version: '3.8'
+
+services:
   todoapi:
-    image: todoapi
+    image: todoapi:latest
     build:
       context: .
-      dockerfile: TodoApi/Dockerfile
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+    volumes:
+      - .:/src
+    networks:
+      - appnetwork
+
+networks:
+  appnetwork:
+    driver: bridge
