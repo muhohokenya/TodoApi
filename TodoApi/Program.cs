@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 var allowOriginsPolicy = "origin";
 // Add services to the container.
 
+//Build new image
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
